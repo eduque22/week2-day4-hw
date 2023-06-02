@@ -79,6 +79,8 @@ while True:
                 print('\nOkay, how many T-Shirts would you like to remove?')
                 sub = int(input('Quantity: '))
                 cart['T-Shirt'] = cart['T-Shirt'] - sub
+                if cart['T-Shirt'] < 0:
+                    cart['T-Shirt'] = 0
                 print('Those items have been removed and your cart has been updated!')
             if item.lower() == 'l':
                 if cart['Long Sleeve Tee'] == 0:
@@ -87,6 +89,8 @@ while True:
                 print('\nOkay, how many Long Sleeve Tees would you like to remove?')
                 sub = int(input('Quantity: '))
                 cart['Long Sleeve Tee'] = cart['Long Sleeve Tee'] - sub
+                if cart['Long Sleeve Tee'] < 0:
+                    cart['Long Sleeve Tee'] = 0
                 print('Those items have been removed and your cart has been updated!')
             if item.lower() == 'c':
                 if cart['Crewneck'] == 0:
@@ -95,6 +99,8 @@ while True:
                 print('\nOkay, how many Crewnecks would you like to remove?')
                 sub = int(input('Quantity: '))
                 cart['Crewneck'] = cart['Crewneck'] - sub
+                if cart['Crewneck'] < 0:
+                    cart['Crewneck'] = 0
                 print('Those items have been removed and your cart has been updated!')
             if item.lower() == 'h':
                 if cart['Hoodie'] == 0:
@@ -103,6 +109,8 @@ while True:
                 print('\nOkay, how many Hoodies would you like to remove?')
                 sub = int(input('Quantity: '))
                 cart['Hoodie'] = cart['Hoodie'] - sub
+                if cart['Hoodie'] < 0:
+                    cart['Hoodie'] = 0
                 print('Those items have been removed and your cart has been updated!')
     if prompt.lower() == 'f':
         print('\nHere\'s your receipt!')
