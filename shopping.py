@@ -18,21 +18,23 @@ while True:
             quantity = int(input('Quantity: '))
             cart['T-Shirt'] = quantity
             print('Great, your cart has been updated!')
-        if item.lower() == 'l':
+        elif item.lower() == 'l':
             print('\nNice, how many Long Sleeve Tees would you like?')
             quantity = int(input('Quantity: '))
             cart['Long Sleeve Tee'] = quantity
             print('Great, your cart has been updated!')
-        if item.lower() == 'c':
+        elif item.lower() == 'c':
             print('\nNice, how many Crewnecks would you like?')
             quantity = int(input('Quantity: '))
             cart['Crewneck'] = quantity
             print('Great, your cart has been updated!')
-        if item.lower() == 'h':
+        elif item.lower() == 'h':
             print('\nNice, how many Hoodies would you like?')
             quantity = int(input('Quantity: '))
             cart['Hoodie'] = quantity
             print('Great, your cart has been updated!')
+        else:
+            print('\nThat option is invalid, please select from options given.')
     elif prompt.lower() == 'v':
         print('\nOkay, let\'s take a look!')
         print('Your Cart:')
@@ -51,22 +53,24 @@ while True:
                 add = int(input('Quantity: '))
                 cart['T-Shirt'] = cart['T-Shirt'] + add
                 print('Great, we got those added and your cart has been updated!')
-            if item.lower() == 'l':
+            elif item.lower() == 'l':
                 print('\nNice, how many Long Sleeve Tees would you like to add?')
                 add = int(input('Quantity: '))
                 cart['Long Sleeve Tee'] = cart['Long Sleeve Tee'] + add
                 print('Great, we got those added and your cart has been updated!')
-            if item.lower() == 'c':
+            elif item.lower() == 'c':
                 print('\nNice, how many Crewnecks would you like to add?')
                 add = int(input('Quantity: '))
                 cart['Crewneck'] = cart['Crewneck'] + add
                 print('Great, we got those added and your cart has been updated!')
-            if item.lower() == 'h':
+            elif item.lower() == 'h':
                 print('\nNice, how many Hoodies would you like to add?')
                 add = int(input('Quantity: '))
                 cart['Hoodie'] = cart['Hoodie'] + add
                 print('Great, we got those added and your cart has been updated!')
-        if aor.lower() == 'r':
+            else:
+                print('\nThat option is invalid, please select from options given.')
+        elif aor.lower() == 'r':
             print('\nHere is your current cart: ')
             print(cart)
             print('\nWhat item would you like to remove?')
@@ -82,7 +86,7 @@ while True:
                 if cart['T-Shirt'] < 0:
                     cart['T-Shirt'] = 0
                 print('Those items have been removed and your cart has been updated!')
-            if item.lower() == 'l':
+            elif item.lower() == 'l':
                 if cart['Long Sleeve Tee'] == 0:
                     print('Sorry, you don\'t have any in your cart.')
                     continue
@@ -92,7 +96,7 @@ while True:
                 if cart['Long Sleeve Tee'] < 0:
                     cart['Long Sleeve Tee'] = 0
                 print('Those items have been removed and your cart has been updated!')
-            if item.lower() == 'c':
+            elif item.lower() == 'c':
                 if cart['Crewneck'] == 0:
                     print('Sorry, you don\'t have any in your cart.')
                     continue
@@ -102,7 +106,7 @@ while True:
                 if cart['Crewneck'] < 0:
                     cart['Crewneck'] = 0
                 print('Those items have been removed and your cart has been updated!')
-            if item.lower() == 'h':
+            elif item.lower() == 'h':
                 if cart['Hoodie'] == 0:
                     print('Sorry, you don\'t have any in your cart.')
                     continue
@@ -112,6 +116,10 @@ while True:
                 if cart['Hoodie'] < 0:
                     cart['Hoodie'] = 0
                 print('Those items have been removed and your cart has been updated!')
+            else:
+                print('\nThat option is invalid, please select from options given')
+        else:
+            print('\nThat option is invalid, please select from options given')
     elif prompt.lower() == 'f':
         print('\nHere\'s your receipt!')
         print(cart)
