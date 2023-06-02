@@ -33,11 +33,11 @@ while True:
             quantity = int(input('Quantity: '))
             cart['Hoodie'] = quantity
             print('Great, your cart has been updated!')
-    if prompt.lower() == 'v':
+    elif prompt.lower() == 'v':
         print('\nOkay, let\'s take a look!')
         print('Your Cart:')
         print(cart)
-    if prompt.lower() == 'i':
+    elif prompt.lower() == 'i':
         print('\nWould you like to add("a") or remove("r") items from your cart?')
         aor = input('Enter here: ')
         if aor.lower() == 'a':
@@ -112,11 +112,12 @@ while True:
                 if cart['Hoodie'] < 0:
                     cart['Hoodie'] = 0
                 print('Those items have been removed and your cart has been updated!')
-    if prompt.lower() == 'f':
+    elif prompt.lower() == 'f':
         print('\nHere\'s your receipt!')
         print(cart)
         print('\nThank you for shopping with Panacea Textile, we hope to see you again soon!')
 
         break
+
     else:
         print('\nThat option is invalid, please select from options given.')
