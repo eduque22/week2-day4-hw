@@ -118,3 +118,5 @@ while True:
         print('\nThank you for shopping with Panacea Textile, we hope to see you again soon!')
 
         break
+    else:
+        print('\nThat option is invalid, please select from options given.')
